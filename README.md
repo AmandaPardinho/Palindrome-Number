@@ -1,11 +1,11 @@
-# Palindrome-Number
+# Palindrome Numbers
 
 ### Abstract
 >Palindrome number is a number reads the same backward as forward.
 
 ---
 ### The Problem
->Given an integer x, where 0 < x < 9999, you should: \
+>Given an integer x, where 0 < x <= 9999, you must: \
 >* Return true if x is palindrome integer; \
 >* Find all palindrome numbers.
 
