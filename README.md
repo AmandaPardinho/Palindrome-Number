@@ -5,11 +5,9 @@
 
 ---
 ### The Problem
->Given an integer x, where 0 < x < 5000, you should:
->
->Return true if x is palindrome integer;
->
->Find all palindrome numbers.
+>Given an integer x, where 0 < x < 9999, you should: \
+>* Return true if x is palindrome integer; \
+>* Find all palindrome numbers.
 
 ---
 ### Why I choose this problem?
@@ -17,4 +15,4 @@
 
 ---
 ### Where did the idea come from?
->Based on a problem proposed by Leetcode
+>Based on a problem proposed by Leetcode.
