@@ -5,7 +5,7 @@
 
 ---
 ### The Problem
->Given an integer x, where 0 < x <= 9999, you must: \
+>Given an integer x, where 1 <= x <= 9999, you must: \
 >* Return true if x is palindrome integer; \
 >* Find all palindrome numbers.
 
