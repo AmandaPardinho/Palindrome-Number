@@ -10,15 +10,16 @@ public class Main{
 		Integer x;
 		int digitNumber = [1, 2, 3, 4];
 		boolean isPalindrome;
+		String digit;
 
 		Scanner sacanner = new Scanner(System.in);
 
 		System.out.println("Enter a number: ");
 		x = scanner.nextInt();
 
-		//if(digitNumber == 1){
+		String digit = Integer.toString(x);
+		System.out.println(digit.lenght());
 
-		//}
 		switch (number){
 			case 1:
 				a = x = a;
