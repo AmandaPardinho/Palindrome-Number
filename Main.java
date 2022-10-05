@@ -1,26 +1,27 @@
 package palindrome;
 
 import java.util.*;
-import java.lang.Math;
+import java.lang.*;
 
 public class Main{
 
 	public static void main(String[] args) {
 
-		Integer x;
-		int digitNumber = [1, 2, 3, 4];
+		int x;
+		//int digitNumber = [1, 2, 3, 4];
 		boolean isPalindrome;
-		String digit;
 
-		Scanner sacanner = new Scanner(System.in);
+
+		Scanner scanner = new Scanner(System.in);
+
 
 		System.out.println("Enter a number: ");
 		x = scanner.nextInt();
 
-		String digit = Integer.toString(x);
-		System.out.println(digit.lenght());
+		String string = Integer.toString(x);
+		System.out.println(string.length());
 
-		switch (number){
+		/*switch (number){
 			case 1:
 				a = x = a;
 				digitNumber = 1;
@@ -38,7 +39,7 @@ public class Main{
 				digitNumber = 4;
 				break;
 			default: "Number not allowed";
-		}
+		}*/
 		
 	}
 
