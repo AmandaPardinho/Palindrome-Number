@@ -12,9 +12,8 @@ public class Main{
 		Integer digitPositionTwo = null;
 		Integer digitPositionThree = null;
 		Integer digitPositionFour = null;
+		int numeral = 0;
 		boolean isAPalindrome;
-
-
 
 		Scanner scanner = new Scanner(System.in);
 
@@ -23,32 +22,33 @@ public class Main{
 
 		String digitNumber = Integer.toString(x);
 		digitNumber = scanner.next();
-		//System.out.println(digit.length());
+		numeral = Integer.parseInt(digitNumber);
+		//System.out.println(digitNumber.length());
 
-		if (digitNumber == 1) {
+		if(numeral == 1){
 			isAPalindrome = true;
 			System.out.println("The number is a palindrome");
-		} else {
-			if (digitNumber == 2 && digitPositionOne == digitPositionTwo && digitPositionOne != 0) {
-				isPalindrome = true;
+		}
+
+		if(numeral == 2 && digitPositionOne == digitPositionTwo && digitPositionOne != 0){
+			isAPalindrome = true;
+			System.out.println("The number is a palindrome");
+		}else{
+			if(numeral == 3 && digitPositionOne != digitPositionTwo && digitPositionTwo != digitPositionThree
+					&& digitPositionOne == digitPositionThree && digitPositionOne != 0){
+				isAPalindrome = true;
 				System.out.println("The number is a palindrome");
-			} else {
-				if (digitNumber == 3 && digitPositionOne != digitPositionTwo &&
-						digitPositionTwo != digitPositionThree && digitPositionOne == digitPositionThree
-						&& digitPositionOne != 0) {
-					isPalindrome = true;
+			}else{
+				if(numeral == 4 && digitPositionOne != digitPositionTwo && digitPositionTwo == digitPositionThree
+						&& digitPositionThree != digitPositionFour && digitPositionOne == digitPositionThree
+						&& digitPositionOne != 0){
+					isAPalindrome = true;
 					System.out.println("The number is a palindrome");
-				} else {
-					if (digitNumber == 4 && digitPositionOne != digitPositionTwo &&
-							digitPositionTwo == digitPositionThree && digitPositionThree != digitPositionFour
-							&& digitPositionOne == digitPositionThree && digitPositionOne != 0) {
-						isPalindrome = true;
-						System.out.println("The number is a palindrome");
-					} else {
-						System.out.println("The number isn't a palindrome.");
-					}
+				}else{
+					System.out.println("The number isn't a palindrome.");
 				}
 			}
 		}
 	}
 }
+
