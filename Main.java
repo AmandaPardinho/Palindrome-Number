@@ -9,12 +9,11 @@ public class Main{
 
 		Integer x;
 		//int digitNumber = [1, 2, 3, 4];
-		boolean isPalindrome;
+		boolean isAPalindrome;
 		//String sizeChosenNumber;
 
 
 		Scanner scanner = new Scanner(System.in);
-
 
 		System.out.println("Enter a number: ");
 		x = scanner.nextInt();
@@ -23,24 +22,32 @@ public class Main{
 		digitNumber = scanner.next();
 		//System.out.println(digit.length());
 
-		if(digitNumber == String.valueOf(1)){
-			isPalindrome = true;
+		if(digitNumber == 1){
+			isAPalindrome = true;
 			System.out.println("The number is a palindrome");
+		}else if(digitNumber == 2){
+			if(digitPositionOne == digitPositionTwo){
+				isPalindrome = true;
+				System.out.println("The number is a palindrome");
+			}else{
+				System.out.println("The number isn't a palindrome.");
+			}
+		}else if(digitNumber == 3) {
+			if(digitPositionOne != digitPositionTwo && digitPositionTwo != digitPositionThree
+					&& digitPositionOne == digitPositionThree){
+				isPalindrome = true;
+				System.out.println("The number is a palindrome");
+			}else{
+				System.out.println("The number isn't a palindrome.");
+			}
+		}else if(digitNumber == 4) {
+			if(digitPositionOne != digitPositionTwo && digitPositionTwo == digitPositionThree
+					&& digitPositionThree != digitPositionFour && digitPositionOne == digitPositionThree){
+				isPalindrome = true;
+				System.out.println("The number is a palindrome");
+			}else{
+				System.out.println("The number isn't a palindrome.");
+			}
 		}
-
-			/*case 2:
-				if(digitNumber = String.valueOf(2)){
-					isPalindrome = true;
-				}
-
-			case 3:
-				digitNumber = String.valueOf(3);
-				break;
-			case 4:
-				digitNumber = String.valueOf(4);
-				break;
-			default:
-				digitNumber = String.valueOf(null);
-				System.out.println("Not allowed");*/
 	}
 }
