@@ -8,9 +8,12 @@ public class Main{
 	public static void main(String[] args) {
 
 		Integer x;
-		//int digitNumber = [1, 2, 3, 4];
+		Integer digitPositionOne = null;
+		Integer digitPositionTwo = null;
+		Integer digitPositionThree = null;
+		Integer digitPositionFour = null;
 		boolean isAPalindrome;
-		//String sizeChosenNumber;
+
 
 
 		Scanner scanner = new Scanner(System.in);
@@ -26,18 +29,19 @@ public class Main{
 			isAPalindrome = true;
 			System.out.println("The number is a palindrome");
 		} else {
-			if (digitNumber == 2 && digitPositionOne == digitPositionTwo) {
+			if (digitNumber == 2 && digitPositionOne == digitPositionTwo && digitPositionOne != 0) {
 				isPalindrome = true;
 				System.out.println("The number is a palindrome");
 			} else {
 				if (digitNumber == 3 && digitPositionOne != digitPositionTwo &&
-						digitPositionTwo != digitPositionThree && digitPositionOne == digitPositionThree) {
+						digitPositionTwo != digitPositionThree && digitPositionOne == digitPositionThree
+						&& digitPositionOne != 0) {
 					isPalindrome = true;
 					System.out.println("The number is a palindrome");
 				} else {
 					if (digitNumber == 4 && digitPositionOne != digitPositionTwo &&
 							digitPositionTwo == digitPositionThree && digitPositionThree != digitPositionFour
-							&& digitPositionOne == digitPositionThree) {
+							&& digitPositionOne == digitPositionThree && digitPositionOne != 0) {
 						isPalindrome = true;
 						System.out.println("The number is a palindrome");
 					} else {
