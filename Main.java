@@ -7,9 +7,10 @@ public class Main{
 
 	public static void main(String[] args) {
 
-		int x;
+		Integer x;
 		//int digitNumber = [1, 2, 3, 4];
 		boolean isPalindrome;
+		//String sizeChosenNumber;
 
 
 		Scanner scanner = new Scanner(System.in);
@@ -18,29 +19,28 @@ public class Main{
 		System.out.println("Enter a number: ");
 		x = scanner.nextInt();
 
-		String string = Integer.toString(x);
-		System.out.println(string.length());
+		String digitNumber = Integer.toString(x);
+		digitNumber = scanner.next();
+		//System.out.println(digit.length());
 
-		/*switch (number){
-			case 1:
-				a = x = a;
-				digitNumber = 1;
-				break;
-			case 2:
-				ab = x = ba;
-				digitNumber = 2;
-				isPalindrome = true;
+		if(digitNumber == String.valueOf(1)){
+			isPalindrome = true;
+			System.out.println("The number is a palindrome");
+		}
+
+			/*case 2:
+				if(digitNumber = String.valueOf(2)){
+					isPalindrome = true;
+				}
+
 			case 3:
-				abc = x = cba;
-				digitNumber = 3;
+				digitNumber = String.valueOf(3);
 				break;
 			case 4:
-				abcd = x = dcba;
-				digitNumber = 4;
+				digitNumber = String.valueOf(4);
 				break;
-			default: "Number not allowed";
-		}*/
-		
+			default:
+				digitNumber = String.valueOf(null);
+				System.out.println("Not allowed");*/
 	}
-
 }
