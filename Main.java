@@ -22,31 +22,28 @@ public class Main{
 		digitNumber = scanner.next();
 		//System.out.println(digit.length());
 
-		if(digitNumber == 1){
+		if (digitNumber == 1) {
 			isAPalindrome = true;
 			System.out.println("The number is a palindrome");
-		}else if(digitNumber == 2){
-			if(digitPositionOne == digitPositionTwo){
+		} else {
+			if (digitNumber == 2 && digitPositionOne == digitPositionTwo) {
 				isPalindrome = true;
 				System.out.println("The number is a palindrome");
-			}else{
-				System.out.println("The number isn't a palindrome.");
-			}
-		}else if(digitNumber == 3) {
-			if(digitPositionOne != digitPositionTwo && digitPositionTwo != digitPositionThree
-					&& digitPositionOne == digitPositionThree){
-				isPalindrome = true;
-				System.out.println("The number is a palindrome");
-			}else{
-				System.out.println("The number isn't a palindrome.");
-			}
-		}else if(digitNumber == 4) {
-			if(digitPositionOne != digitPositionTwo && digitPositionTwo == digitPositionThree
-					&& digitPositionThree != digitPositionFour && digitPositionOne == digitPositionThree){
-				isPalindrome = true;
-				System.out.println("The number is a palindrome");
-			}else{
-				System.out.println("The number isn't a palindrome.");
+			} else {
+				if (digitNumber == 3 && digitPositionOne != digitPositionTwo &&
+						digitPositionTwo != digitPositionThree && digitPositionOne == digitPositionThree) {
+					isPalindrome = true;
+					System.out.println("The number is a palindrome");
+				} else {
+					if (digitNumber == 4 && digitPositionOne != digitPositionTwo &&
+							digitPositionTwo == digitPositionThree && digitPositionThree != digitPositionFour
+							&& digitPositionOne == digitPositionThree) {
+						isPalindrome = true;
+						System.out.println("The number is a palindrome");
+					} else {
+						System.out.println("The number isn't a palindrome.");
+					}
+				}
 			}
 		}
 	}
