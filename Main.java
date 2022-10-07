@@ -1,7 +1,7 @@
 package palindrome;
 
 import java.util.*;
-import java.lang.*;
+
 
 public class Main{
 
@@ -12,22 +12,27 @@ public class Main{
 		Integer digitPositionTwo = null;
 		Integer digitPositionThree = null;
 		Integer digitPositionFour = null;
-		int numeral = 0;
+		int numeral;
 		boolean isAPalindrome;
 
 		Scanner scanner = new Scanner(System.in);
+
+		System.out.println("""
+		  Given an integer x, where 1 <= x <= 9999, you must return true if x 
+		  is palindrome integer or false if it's not a palindrome integer. 
+		""");
 
 		System.out.println("Enter a number: ");
 		xNumber = scanner.nextInt();
 
 		String digitNumber = Integer.toString(xNumber);
-		digitNumber = scanner.next();
+		//digitNumber = scanner.next();
 		System.out.println(digitNumber.length());
 		numeral = Integer.parseInt(digitNumber);
+        System.out.println(numeral);
 
 		/*switch(numeral){
 			case 1:
-				isAPalindrome = true;
 				System.out.println("The number is a palindrome");
 				break;
 			case 2:
@@ -39,21 +44,27 @@ public class Main{
 				}
 				break;
 			case 3:
-				if(digitPositionOne != digitPositionTwo && digitPositionTwo != digitPositionThree
-						&& digitPositionOne == digitPositionThree && digitPositionOne != 0) {
-					isAPalindrome = true;
+				if(digitPositionOne == digitPositionTwo == digitPositionThree){
+					//isAPalindrome = true;
+					System.out.println("The number is a palindrome");
+				}else if(digitPositionOne != digitPositionTwo && digitPositionTwo != digitPositionThree
+						&& digitPositionOne == digitPositionThree && digitPositionOne != 0){
+					//isAPalindrome = true;
 					System.out.println("The number is a palindrome");
 				}else{
 					System.out.println("The number isn't a palindrome.");
 				}
 				break;
 			case 4:
-				if(digitPositionOne != digitPositionTwo && digitPositionTwo == digitPositionThree
-						&& digitPositionThree != digitPositionFour && digitPositionOne == digitPositionThree
-						&& digitPositionOne != 0){
-					isAPalindrome = true;
+				if(digitPositionOne == digitPositionTwo == digitPositionThree == digitPositionFour){
+					//isAPalindrome = true;
 					System.out.println("The number is a palindrome");
-				}else {
+				}else if(digitPositionOne != digitPositionTwo && digitPositionTwo == digitPositionThree
+						&& digitPositionThree != digitPositionFour && digitPositionOne == digitPositionFour
+						&& digitPositionOne != 0) {
+					//isAPalindrome = true;
+					System.out.println("The number is a palindrome");
+				} else {
 					System.out.println("The number isn't a palindrome.");
 				}
 				break;
