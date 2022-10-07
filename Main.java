@@ -34,18 +34,19 @@ public class Main{
 
 		switch(numeral){
 			case 1:
-				if(digitPositionOne != 0)
-				System.out.println("The number is a palindrome");
+				if(digitPositionOne != 0){
+					System.out.println("The number is a palindrome");
+				}
 				break;
 			case 2:
-				if(digitPositionOne == digitPositionTwo) {
+				if(digitPositionOne == digitPositionTwo){
 					System.out.println("The number is a palindrome");
 				}else{
 					System.out.println("The number isn't a palindrome.");
 				}
 				break;
 			case 3:
-				if(digitPositionOne == digitPositionTwo == digitPositionThree) {
+				if(digitPositionOne == digitPositionTwo == digitPositionThree){
 					System.out.println("The number is a palindrome");
 				}else if(digitPositionOne != digitPositionTwo && digitPositionTwo != digitPositionThree
 								&& digitPositionOne == digitPositionThree && digitPositionThree != 0) {
@@ -56,12 +57,10 @@ public class Main{
 				break;
 			case 4:
 				if(digitPositionOne == digitPositionTwo == digitPositionThree == digitPositionFour){
-					//isAPalindrome = true;
 					System.out.println("The number is a palindrome");
 				}else if(digitPositionOne != digitPositionTwo && digitPositionTwo == digitPositionThree
 						&& digitPositionThree != digitPositionFour && digitPositionOne == digitPositionFour
 						&& digitPositionOne != 0) {
-					//isAPalindrome = true;
 					System.out.println("The number is a palindrome");
 				} else {
 					System.out.println("The number isn't a palindrome.");
