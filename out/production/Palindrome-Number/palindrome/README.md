@@ -10,14 +10,15 @@
 
 > Given an integer x, where 1 <= x <= 9999, you must:
 >
-> * Return true if x is palindrome integer;
-> *
+> * If true return x is palindrome integer;
+> * If false return x is not a palindrome integer.
 
 ---
 
 ### Why I choose this problem?
 
-> completar
+> I decided to solve this problem because I wanted to know what is an  integer. In the previous project I found a lot 
+> this word in my research so I was curious about it.
 
 ---
 

@@ -18,8 +18,8 @@ public class Main{
 		Scanner scanner = new Scanner(System.in);
 
 		System.out.println("""
-		  Given an integer x, where 1 <= x <= 9999, you must return true if x 
-		  is palindrome integer or false if it's not a palindrome integer. 
+		  Given an integer x, where 1 <= x <= 9999, if true you must return x 
+		  is palindrome integer or if false it's not a palindrome integer. 
 		""");
 
 		System.out.println("Enter a number: ");
