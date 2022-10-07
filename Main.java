@@ -13,8 +13,6 @@ public class Main{
 		Integer digitPositionThree = null; //third position from right to left (c)
 		Integer digitPositionFour = null; //fourth position from right to left (m)
 		int numeral;
-		boolean isAPalindrome;
-		Integer [] array = {digitPositionFour, digitPositionThree, digitPositionTwo, digitPositionOne}
 
 		Scanner scanner = new Scanner(System.in);
 
@@ -30,7 +28,7 @@ public class Main{
 		//digitNumber = scanner.next();
 		//System.out.println(digitNumber.length());
 		numeral = Integer.parseInt(digitNumber);
-        System.out.println(numeral);
+        //System.out.println(numeral);
 
 		if(numeral == 1){
 			if(digitPositionOne != 0){
