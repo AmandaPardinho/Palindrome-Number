@@ -8,12 +8,13 @@ public class Main{
 	public static void main(String[] args) {
 
 		Integer xNumber;
-		Integer digitPositionOne = null;
-		Integer digitPositionTwo = null;
-		Integer digitPositionThree = null;
-		Integer digitPositionFour = null;
+		Integer digitPositionOne = null; //first position from right to left (u)
+		Integer digitPositionTwo = null; //second position from right to left (d)
+		Integer digitPositionThree = null; //third position from right to left (c)
+		Integer digitPositionFour = null; //fourth position from right to left (m)
 		int numeral;
 		boolean isAPalindrome;
+		Integer [] array = {digitPositionFour, digitPositionThree, digitPositionTwo, digitPositionOne}
 
 		Scanner scanner = new Scanner(System.in);
 
@@ -27,12 +28,13 @@ public class Main{
 
 		String digitNumber = Integer.toString(xNumber);
 		//digitNumber = scanner.next();
-		System.out.println(digitNumber.length());
-		numeral = Integer.parseInt(digitNumber);
+		//System.out.println(digitNumber.length());
+		numeral = Integer.parseInt(String.valueOf(digitNumber.length()));
         System.out.println(numeral);
 
 		switch(numeral){
 			case 1:
+				if(digitPositionOne != 0)
 				System.out.println("The number is a palindrome");
 				break;
 			case 2:
