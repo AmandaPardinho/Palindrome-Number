@@ -18,7 +18,7 @@ public class Main{
 		Scanner scanner = new Scanner(System.in);
 
 		System.out.println("""
-		  Given an integer x, where 1 <= x <= 9999, if true you must return x 
+		  Given an integer x, where 1 <= x <= 9999, if true you must return x
 		  is palindrome integer or if false it's not a palindrome integer. 
 		""");
 
@@ -31,7 +31,7 @@ public class Main{
 		numeral = Integer.parseInt(digitNumber);
         System.out.println(numeral);
 
-		/*switch(numeral){
+		switch(numeral){
 			case 1:
 				System.out.println("The number is a palindrome");
 				break;
@@ -69,7 +69,7 @@ public class Main{
 				}
 				break;
 			default: System.out.println ("Not allowed.");
-		}*/
+		}
 	}
 }
 
