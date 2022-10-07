@@ -38,7 +38,7 @@ public class Main{
 				System.out.println("The number is a palindrome");
 				break;
 			case 2:
-				if(digitPositionOne == digitPositionTwo && digitPositionOne != 0) {
+				if(digitPositionOne == digitPositionTwo) {
 					isAPalindrome = true;
 					System.out.println("The number is a palindrome");
 				}else{
