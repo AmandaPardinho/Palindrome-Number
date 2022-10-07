@@ -45,12 +45,9 @@ public class Main{
 				}
 				break;
 			case 3:
-				if(digitPositionOne == digitPositionTwo == digitPositionThree){
-					//isAPalindrome = true;
-					System.out.println("The number is a palindrome");
-				}else if(digitPositionOne != digitPositionTwo && digitPositionTwo != digitPositionThree
-						&& digitPositionOne == digitPositionThree && digitPositionOne != 0){
-					//isAPalindrome = true;
+				if(digitPositionOne == digitPositionTwo == digitPositionThree || (
+						digitPositionOne != digitPositionTwo && digitPositionTwo != digitPositionThree
+								&& digitPositionOne == digitPositionThree && digitPositionOne != 0)) {
 					System.out.println("The number is a palindrome");
 				}else{
 					System.out.println("The number isn't a palindrome.");
