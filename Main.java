@@ -29,44 +29,47 @@ public class Main{
 		String digitNumber = Integer.toString(xNumber);
 		//digitNumber = scanner.next();
 		//System.out.println(digitNumber.length());
-		numeral = Integer.parseInt(String.valueOf(digitNumber.length()));
+		numeral = Integer.parseInt(digitNumber);
         System.out.println(numeral);
 
-		switch(numeral){
-			case 1:
-				if(digitPositionOne != 0){
-					System.out.println("The number is a palindrome");
-				}
-				break;
-			case 2:
-				if(digitPositionOne == digitPositionTwo){
-					System.out.println("The number is a palindrome");
-				}else{
-					System.out.println("The number isn't a palindrome.");
-				}
-				break;
-			case 3:
-				if(digitPositionOne == digitPositionTwo == digitPositionThree){
-					System.out.println("The number is a palindrome");
-				}else if(digitPositionOne != digitPositionTwo && digitPositionTwo != digitPositionThree
-								&& digitPositionOne == digitPositionThree && digitPositionThree != 0) {
-					System.out.println("The number is a palindrome");
-				}else{
-					System.out.println("The number isn't a palindrome.");
-				}
-				break;
-			case 4:
-				if(digitPositionOne == digitPositionTwo == digitPositionThree == digitPositionFour){
-					System.out.println("The number is a palindrome");
-				}else if(digitPositionOne != digitPositionTwo && digitPositionTwo == digitPositionThree
-						&& digitPositionThree != digitPositionFour && digitPositionOne == digitPositionFour
-						&& digitPositionOne != 0) {
-					System.out.println("The number is a palindrome");
-				} else {
-					System.out.println("The number isn't a palindrome.");
-				}
-				break;
-			default: System.out.println ("Not allowed.");
+		if(numeral == 1){
+			if(digitPositionOne != 0){
+				System.out.println("The number is a palindrome");
+			}
+		}
+
+		if(numeral == 2){
+			if(digitPositionOne == digitPositionTwo){
+				System.out.println("The number is a palindrome");
+			}else{
+				System.out.println("The number isn't a palindrome.");
+			}
+		}
+
+		if(numeral == 3){
+			if(digitPositionOne == digitPositionTwo && digitPositionTwo == digitPositionThree){
+				System.out.println("The number is a palindrome");
+			}else if(digitPositionOne != digitPositionTwo && digitPositionTwo != digitPositionThree
+					&& digitPositionOne == digitPositionThree && digitPositionThree != 0) {
+				System.out.println("The number is a palindrome");
+			}else{
+				System.out.println("The number isn't a palindrome.");
+			}
+		}
+
+		if(numeral == 4){
+			if((digitPositionOne == digitPositionTwo && digitPositionTwo == digitPositionThree &&
+			digitPositionThree == digitPositionFour) || (digitPositionOne != digitPositionTwo && digitPositionTwo == digitPositionThree
+					&& digitPositionThree != digitPositionFour && digitPositionOne == digitPositionFour
+					&& digitPositionOne != 0)){
+				System.out.println("The number is a palindrome");
+			}else{
+				System.out.println("The number isn't a palindrome.");
+			}
+		}
+
+		if(numeral == 0 || numeral < 0 || numeral > 4){
+			System.out.println("Number not allowed.");
 		}
 	}
 }
