@@ -17,8 +17,8 @@
 
 ### Why I choose this problem?
 
-> I decided to solve this problem because I wanted to know what is an  integer. In the previous project I found a lot 
-> this word in my research so I was curious about it.
+> I decided to solve this problem because I wanted to know what is an integer. In the previous project I found a lot 
+> this word in my research. So I was curious about it.
 
 ---
 

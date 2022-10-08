@@ -2,73 +2,67 @@ package palindrome;
 
 import java.util.*;
 
+public class Main {
 
-public class Main{
+    public static void main(String[] args) {
 
-	public static void main(String[] args) {
+        Integer xNumber;
+        Integer digits;
 
-		Integer xNumber;
-		Integer digitPositionOne = null; //first position from right to left (u)
-		Integer digitPositionTwo = null; //second position from right to left (d)
-		Integer digitPositionThree = null; //third position from right to left (c)
-		Integer digitPositionFour = null; //fourth position from right to left (m)
-		int numeral;
+        Scanner scanner = new Scanner(System.in);
 
-		Scanner scanner = new Scanner(System.in);
+        System.out.println("""
+                  Given an integer x, where 1 <= x <= 9999, if true you must return x
+                  is palindrome integer or if false it's not a palindrome integer. 
+                """);
 
-		System.out.println("""
-		  Given an integer x, where 1 <= x <= 9999, if true you must return x
-		  is palindrome integer or if false it's not a palindrome integer. 
-		""");
+        do {
+            System.out.println("Enter a number: ");
+            xNumber = scanner.nextInt();
 
-		System.out.println("Enter a number: ");
-		xNumber = scanner.nextInt();
+            String digitNumber = Integer.toString(xNumber);
+            digits = digitNumber.length();
 
-		String digitNumber = Integer.toString(xNumber);
-		//digitNumber = scanner.next();
-		//System.out.println(digitNumber.length());
-		numeral = Integer.parseInt(digitNumber);
-        //System.out.println(numeral);
+            List<Integer> digit = new ArrayList<>();
+            for (int i = 0; i < digitNumber.length(); i++) {
+                digit.add((int) digitNumber.charAt(i));
+            }
 
-		if(numeral == 1){
-			if(digitPositionOne != 0){
-				System.out.println("The number is a palindrome");
-			}
-		}
+            switch (digits) {
+                case 1:
+                    if (xNumber > 0) {
+                        System.out.println("The number is a palindrome");
+                    } else {
 
-		if(numeral == 2){
-			if(digitPositionOne == digitPositionTwo){
-				System.out.println("The number is a palindrome");
-			}else{
-				System.out.println("The number isn't a palindrome.");
-			}
-		}
-
-		if(numeral == 3){
-			if(digitPositionOne == digitPositionTwo && digitPositionTwo == digitPositionThree){
-				System.out.println("The number is a palindrome");
-			}else if(digitPositionOne != digitPositionTwo && digitPositionTwo != digitPositionThree
-					&& digitPositionOne == digitPositionThree && digitPositionThree != 0) {
-				System.out.println("The number is a palindrome");
-			}else{
-				System.out.println("The number isn't a palindrome.");
-			}
-		}
-
-		if(numeral == 4){
-			if((digitPositionOne == digitPositionTwo && digitPositionTwo == digitPositionThree &&
-			digitPositionThree == digitPositionFour) || (digitPositionOne != digitPositionTwo && digitPositionTwo == digitPositionThree
-					&& digitPositionThree != digitPositionFour && digitPositionOne == digitPositionFour
-					&& digitPositionOne != 0)){
-				System.out.println("The number is a palindrome");
-			}else{
-				System.out.println("The number isn't a palindrome.");
-			}
-		}
-
-		if(numeral == 0 || numeral < 0 || numeral > 4){
-			System.out.println("Number not allowed.");
-		}
-	}
+                        System.out.println("Number not allowed.");
+                    }
+                    break;
+                case 2:
+                    if (digit.get(0).equals(digit.get(1))) {
+                        System.out.println("The number is a palindrome");
+                    } else {
+                        System.out.println("The number isn't a palindrome.");
+                    }
+                    break;
+                case 3:
+                    if ((digit.get(0).equals(digit.get(1)) && digit.get(1).equals(digit.get(2))) || (digit.get(0).equals(digit.get(2)))) {
+                        System.out.println("The number is a palindrome");
+                    } else {
+                        System.out.println("The number isn't a palindrome.");
+                    }
+                    break;
+                case 4:
+                    if ((digit.get(0).equals(digit.get(1)) && (digit.get(1).equals(digit.get(2)) && (digit.get(2).equals(digit.get(3))) ||
+                            (digit.get(0).equals(digit.get(3)) && (digit.get(1).equals(digit.get(2))))))) {
+                        System.out.println("The number is a palindrome");
+                    } else {
+                        System.out.println("The number isn't a palindrome.");
+                    }
+                    break;
+                default:
+                    System.out.println("Number not allowed.");
+            }
+        } while (xNumber <= 0 || xNumber > 9999);
+    }
 }
 
