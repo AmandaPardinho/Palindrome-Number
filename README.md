@@ -17,7 +17,7 @@
 
 ### Why I choose this problem?
 
-> I decided to solve this problem because I wanted to know what is an integer. In the previous project I found a lot 
+> I decided to solve this problem because I wanted to know what is an integer. In the previous project I found a lot
 > this word in my research. So I was curious about it.
 
 ---
@@ -25,3 +25,7 @@
 ### Where did the idea come from?
 
 > Based on a problem proposed by Leetcode.
+
+---
+
+![Image](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white
