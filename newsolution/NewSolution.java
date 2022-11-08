@@ -29,5 +29,7 @@ public class NewSolution {
         }else{
             System.out.println("This number is not allowed. Start again.");
         }
+
+        scanner.close();
     }
 }
